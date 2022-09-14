@@ -59,11 +59,8 @@ interface RpcLibClientBase {
 
     fun simGetGroundTruthKinematics(vehicleName: String = ""): KinematicsState
     fun simGetGroundTruthEnvironment(vehicleName: String = ""): EnvironmentState
-<<<<<<< HEAD
-    
+
     fun listVehicles(): Array<String>
-=======
->>>>>>> ab3e5be3cc42213c9ecfd1b3aaf35abc7bde3296
 
     // region APIs to control a character in scene
     fun simCharSetFaceExpression(expressionName: String, value: Float, characterName: String = "")
