@@ -3,6 +3,16 @@
 This repository aim to provide a JVM interface to the AirSim API in order
 to allow its use with Java, Kotlin, Scala, SARL, etc.
 
+## Install
+
+You need need an up-to-date version of Gradle, e.g. 7
+
+```sh
+gradle publishToMavenLocal
+```
+
+[GitHub workflow](.github/workflows/publish.yml)
+
 ## Organization
 
 The package fr.utbm.airsim.api located in src/main/kotlin contains the class representing the possible
