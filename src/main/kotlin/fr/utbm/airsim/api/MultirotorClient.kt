@@ -13,6 +13,7 @@ interface MultirotorClientInterface : RpcLibClientBase {
 
     fun moveByAngleZAzync(pitch: Float, roll: Float, z: Float, yaw: Float, duration: Float, vehicleName: String = ""): Future<Void>
     fun moveByAngleThrottleAsync(pitch: Float, roll: Float, z: Float, yaw: Float, duration: Float, vehicleName: String = ""): Future<Void>
+    fun moveByRollPitchYawrateThrottleAsync(roll: Float, pitch: Float, yawRate: Float, throttle:Float, vehicleName: String = ""): Future<Void>
     fun moveByVelocityAsync(vx: Float, vy: Float, vz: Float, duration: Float,
                             drivetrainType: DrivetrainType = DrivetrainType.MAX_DEGREE_OF_FREEDOM,
                             yawMode: YawMode = YawMode(), vehicleName: String = ""): Future<Void>

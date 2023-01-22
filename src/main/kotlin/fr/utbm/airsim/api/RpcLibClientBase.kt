@@ -40,7 +40,7 @@ interface RpcLibClientBase {
 
     fun simSetSegmentationObjectID(meshName: String, objectId: String, isNameRegex: Boolean = true)
     fun simGetSegmentationObjectID(meshName: String)
-    fun simPrintLogMessage(message: String, messageParam: String, severity: Int = 0)
+    fun simPrintLogMessage(message: String, messageParam: String = "", severity: Int = 0)
 
     fun getHomeGeoPoint(vehicleName: String = ""): GeoPoint
 
@@ -54,8 +54,9 @@ interface RpcLibClientBase {
 
     fun simGetCollisionInfo(vehicleName: String = ""): CollisionInfo
 
-    fun simGetCameraInfo(cameraName: String, vehicleName: String = ""): CameraInfo
+    fun simGetCameraInfo(cameraName: String, vehicleName: String = "", external: Boolean = false): CameraInfo
     fun simSetCameraOrientation(cameraName: String, orientation: Quaternionr, vehicleName: String = "")
+    fun simGetDistortionParams(cameraName: String, vehicleName: String = ""): Array<Float>
 
     fun simGetGroundTruthKinematics(vehicleName: String = ""): KinematicsState
     fun simGetGroundTruthEnvironment(vehicleName: String = ""): EnvironmentState
